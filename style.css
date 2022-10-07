@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+/*url(./images/bg-pattern-bottom.svg) , top -500px left -200px*/
+body {
+  background-image: url(./images/bg-pattern-bottom.svg),
+    url(./images/bg-pattern-top.svg);
+  background-position: 650px 350px, -270px -600px;
+  background-repeat: no-repeat, no-repeat;
+  background-color: var(--Dark-cyan);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+.container {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.container .image {
+  position: relative;
+}
+.container .image .victor {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.container .info {
+  text-align: center;
+}
+.container .text .address {
+  color: var(--Very-dark-desaturated-blue);
+  margin: 70px 0px 19px;
+  font-weight: 700;
+}
+.container .text .address span {
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+  margin-left: 5px;
+}
+.container .text .address p {
+  color: var(--Dark-grayish-blue);
+  margin: 7px 0px 5px;
+  font-weight: 400;
+}
+.info .box {
+  border-top: 1px solid hsl(0deg 0% 59% / 25%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info .box div {
+  color: var(--Very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.info .box span {
+  color: var(--Dark-gray);
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+@media (max-width: 357px) {
+  body {
+    background-position: 103px 308px, -609px -756px;
+  }
+  .container {
+    width: 300px;
+  }
+}
+@media (min-width: 358px) and (max-width: 500px) {
+  body {
+    background-position: 160px 344px, -702px -593px;
+  }
+  .container {
+    width: 300px;
+  }
+}
